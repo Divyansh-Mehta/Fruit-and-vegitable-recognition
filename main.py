@@ -45,8 +45,8 @@ def run():
         img = Image.open(img_file).resize((250,250))
         st.image(img,use_column_width=False)
         save_image_path = './upload_images/'+img_file.name
-        with open(save_image_path, "wb") as f:
-            f.write(img_file.getbuffer())
+       # with open(save_image_path, "wb") as f:
+        #    f.write(img_file.getbuffer())
 
         # if st.button("Predict"):
         if img_file is not None:
