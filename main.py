@@ -40,11 +40,11 @@ def processed_img(img):
 def run():
     st.title("Fruits🍍-Vegetable🍅 Classification")
     img_file = st.file_uploader("Choose an Image", type=["jpg", "png"])
-    img = Image.open(img_file).resize((224,224))
 
 
     if img_file is not None:
         if img_file is not None:
+            img = Image.open(img_file).resize((224,224))
             st.image(img,use_column_width=False)
             result= processed_img(img)
             print(result)
