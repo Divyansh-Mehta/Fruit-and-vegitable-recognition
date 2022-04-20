@@ -25,7 +25,6 @@ def fetch_calories(prediction):
         print(e)
 
 def processed_img(img):
-    #img=load_img(img_path,target_size=(224,224,3))
     img=img_to_array(img)
     img=img/255
     img=np.expand_dims(img,0)
@@ -46,7 +45,6 @@ def run():
 
 
     if img_file is not None:
-        # if st.button("Predict"):
         if img_file is not None:
             result= processed_img(img)
             print(result)
