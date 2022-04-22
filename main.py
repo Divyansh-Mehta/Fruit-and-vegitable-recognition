@@ -41,19 +41,17 @@ def run():
     st.title("Fruits🍍-Vegetable🍅 Classification")
     img_file = st.file_uploader("Choose an Image", type=["jpg", "png"])
 
-
     if img_file is not None:
-        if img_file is not None:
-            img = Image.open(img_file).resize((224,224))
-            st.image(img,use_column_width=False)
-            result= processed_img(img)
-            print(result)
-            if result in vegetables:
-                st.info('**Category : Vegetables**')
-            else:
-                st.info('**Category : Fruit**')
-            st.success("**Predicted : "+result+'**')
-            cal = fetch_calories(result)
-            if cal:
-                st.warning('**'+cal+'(100 grams)**')
+        img = Image.open(img_file).resize((224,224))
+        st.image(img,use_column_width=False)
+        result= processed_img(img)
+        print(result)
+        if result in vegetables:
+            st.info('**Category : Vegetables**')
+        else:
+            st.info('**Category : Fruit**')
+        st.success("**Predicted : "+result+'**')
+        cal = fetch_calories(result)
+        if cal:
+            st.warning('**'+cal+'(100 grams)**')
 run()
