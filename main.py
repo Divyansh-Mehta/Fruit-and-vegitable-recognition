@@ -38,7 +38,7 @@ def processed_img(img):
     return res.capitalize()
 
 def run():
-    st.title("Calorie Estimator")
+    st.title("CaLoRie EstiMatOr")
     img_file = st.file_uploader("Upload Image", type=["jpg", "png"])
 
     if img_file is not None:
