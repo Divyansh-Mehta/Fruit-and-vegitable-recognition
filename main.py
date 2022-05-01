@@ -53,7 +53,7 @@ def run():
         else:
             ctg = "Fruit"
             st.info('**Category : Fruit**')
-        st.success('**' +ctg+": +result+'**'")
+        st.success('**' +ctg+': +result+**')
         cal = fetch_calories(result)
         if cal:
             st.warning('**'+cal+'(100 grams)**')
