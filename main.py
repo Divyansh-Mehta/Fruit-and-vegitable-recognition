@@ -38,8 +38,8 @@ def processed_img(img):
     return res.capitalize()
 
 def run():
-    st.title("Fruits🍍-Vegetable🍅 Classification")
-    img_file = st.file_uploader("Choose an Image", type=["jpg", "png"])
+    st.title("Calorie Estimator")
+    img_file = st.file_uploader("Upload Image", type=["jpg", "png"])
 
     if img_file is not None:
         img = Image.open(img_file).resize((224,224))
