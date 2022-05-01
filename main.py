@@ -48,7 +48,7 @@ def run():
         print(result)
         ctg = None
         if result in vegetables:
-            ctg = "vegitable"
+            ctg = "vegetable"
             st.info('**Category : Vegetables**')
         else:
             ctg = "Fruit"
