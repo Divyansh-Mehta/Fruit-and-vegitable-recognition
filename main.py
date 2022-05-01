@@ -46,11 +46,14 @@ def run():
         st.image(img,use_column_width=False)
         result= processed_img(img)
         print(result)
+        ctg = None
         if result in vegetables:
+            ctg = "vegitable"
             st.info('**Category : Vegetables**')
         else:
+            ctg = "Fruit"
             st.info('**Category : Fruit**')
-        st.success("**Predicted : "+result+'**')
+        st.success('**' +ctg+": +result+'**'")
         cal = fetch_calories(result)
         if cal:
             st.warning('**'+cal+'(100 grams)**')
