@@ -44,7 +44,6 @@ def run():
     if img_file is not None:
         img = Image.open(img_file).resize((224,224))
         st.image(img,use_column_width=False)
-        predict = st.button("Find Calories")
         result= processed_img(img)
         print(result)
         ctg = None
@@ -55,6 +54,7 @@ def run():
             ctg = "Fruit"
             st.info('**Category : Fruit**')
         st.success('**' + ctg +' : ' + result+ '**')
+        predict = st.button("Find Calories")
         if predict:
             cal = fetch_calories(result)
             if cal:
