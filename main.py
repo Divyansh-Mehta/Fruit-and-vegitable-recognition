@@ -54,7 +54,8 @@ def run():
             ctg = "Fruit"
             st.info('**Category : Fruit**')
         st.success('**' + ctg +' : ' + result+ '**')
-        predict = st.button("Find Calories")
+        margin1, pre, margin2 = st.columns([2,1,2])
+        predict = pre.button("Find Calories")
         if predict:
             cal = fetch_calories(result)
             if cal:
