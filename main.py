@@ -45,9 +45,6 @@ def run():
         img = Image.open(img_file).resize((224,224))
         st.image(img,use_column_width=False)
         predict = st.button("Find Calories")
-
-
-    if predict:
         result= processed_img(img)
         print(result)
         ctg = None
@@ -58,9 +55,10 @@ def run():
             ctg = "Fruit"
             st.info('**Category : Fruit**')
         st.success('**' + ctg +' : ' + result+ '**')
-        cal = fetch_calories(result)
-        if cal:
-            st.warning('**' + cal + '(100 grams)**')
+        if predict:
+            cal = fetch_calories(result)
+            if cal:
+                st.warning('**' + cal + '(100 grams)**')
 
 rad = st.sidebar.radio("Navigation", ["Home", "About", "Calorie Estimator"])
 if rad == "Home":
