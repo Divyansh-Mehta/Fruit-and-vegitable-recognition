@@ -40,7 +40,7 @@ def processed_img(img):
 def run():
     margin1, titleDis, margin2 = st.columns([1,3,1])
     titleDis.title("CaLoRie EstiMatOr")
-    img_file = st.file_uploader("Upload Image", type=["jpg", "png"])
+    img_file = st.file_uploader("""## Upload Image""", type=["jpg", "png"])
     predict = None
     if img_file is not None:
         img = Image.open(img_file).resize((224,224))
