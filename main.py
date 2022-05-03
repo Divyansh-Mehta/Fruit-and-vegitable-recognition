@@ -38,7 +38,8 @@ def processed_img(img):
     return res.capitalize()
 
 def run():
-    st.title("CaLoRie EstiMatOr")
+    margin1, titleDis, margin2 = st.columns([2,1,2])
+    titleDis.title("CaLoRie EstiMatOr")
     img_file = st.file_uploader("Upload Image", type=["jpg", "png"])
     predict = None
     if img_file is not None:
