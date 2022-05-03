@@ -44,7 +44,7 @@ def run():
     if img_file is not None:
         img = Image.open(img_file).resize((224,224))
         margin1, imgDis, margin2 = st.columns([1,2,1])
-        imgDis.image(img,use_column_width=true)
+        imgDis.image(img,use_column_width=True)
         result= processed_img(img)
         print(result)
         ctg = None
