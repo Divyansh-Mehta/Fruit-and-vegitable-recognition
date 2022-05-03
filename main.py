@@ -57,4 +57,11 @@ def run():
         cal = fetch_calories(result)
         if cal:
             st.warning('**' + cal + '(100 grams)**')
-run()
+
+rad = st.sidebar.radio("Navigation", ["Home", "About", "Calorie Estimator"])
+if rad == "Home":
+    st.text("Hi")
+if rad == "About":
+    st.text("hi again")
+if rad == "Calorie Estimator":
+    run()
