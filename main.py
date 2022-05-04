@@ -65,8 +65,8 @@ def run():
 
 rad = st.sidebar.radio("Navigation", ["Home", "About", "Calorie Estimator"])
 if rad == "Home":
-    st.text("Hi")
+    st.text("Welcome to CALORIESTA")
 if rad == "About":
-    st.text("hi again")
+    st.text("QUALITY MATTERS MORE THAN QUANTITY, SO COUNT YOUR CALORIES")
 if rad == "Calorie Estimator":
     run()
